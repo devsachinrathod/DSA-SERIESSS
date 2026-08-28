@@ -6,7 +6,7 @@ class TwoSum {
     public int[] twoSum(int[] nums, int target) {
 
         int[] result = new int[2];
-        Map<Integer, Integer> map = new HashMap<>();
+        Map<Integer, Integer> map = new HashMap<>(); 7
 
         for (int i = 0; i < nums.length; i++) {
 //9 -2 = 7
@@ -14,8 +14,8 @@ class TwoSum {
             int complement = target - nums[i];
 
             if (map.containsKey(complement)) {
-                result[0] = map.get(complement);
-                result[1] = i;
+                result[0] = map.get(complement); 7
+                result[1] = i; 2
                 break;
             }
 
