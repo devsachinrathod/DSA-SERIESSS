@@ -22,7 +22,10 @@ class Solution {
         int[] nums = {1, 3, 2, 2, 3};
 
         Solution s = new Solution();
-
+        // System.out.println(nums.length);
+        for(int i = 0; i < nums.length -1; i++){
+            System.out.println(nums[i]);
+        }
         System.out.println(s.isMonotonic(nums));
     }
 }
