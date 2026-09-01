@@ -1,31 +1,27 @@
 class Solution {
-    public boolean isMonotonic(int[] nums) {
-
-        boolean increasing = true;
-        boolean decreasing = true;
-
-        for (int i = 0; i < nums.length - 1; i++) {
-
-            if (nums[i] > nums[i + 1]) {
+    
+    boolean increasing = true;
+    boolean decreasing = true;
+    //1,9,2,2,3
+    public boolean isMonotonic(int[] arr) {
+        for(int i = 0;i< arr.length - 1; i++){
+            if(arr[i] < arr[i+1]){ ///increasing
                 increasing = false;
             }
-
-            if (nums[i] < nums[i + 1]) {
-                decreasing = false;
+            if(arr[i] > arr[i+1]){ ///Decreasing
+                decreasing = false;//true ture truw truw
             }
         }
+        System.out.println(increasing); //false
+        System.out.println(decreasing); //true
 
-        return increasing || decreasing;
+        return increasing || decreasing; 
+        
     }
-
     public static void main(String[] args) {
-        int[] nums = {1, 3, 2, 2, 3};
-
+        
+        int [] arr = {1,5,2,2,3};
         Solution s = new Solution();
-        // System.out.println(nums.length);
-        for(int i = 0; i < nums.length -1; i++){
-            System.out.println(nums[i]);
-        }
-        System.out.println(s.isMonotonic(nums));
+        System.out.println(s.isMonotonic(arr));
     }
 }
