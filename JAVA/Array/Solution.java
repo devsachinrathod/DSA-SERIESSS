@@ -26,22 +26,31 @@
 //     }
 // }
 
+
 class Solution {
-  public int coinscheck(int n){
-     int rows = 0;
-     for(int i = 1; i< n; i++){
-        if(n < i){
-            break;
+
+    public boolean canJump(int[] arr) {
+
+        int maxReach = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+
+            if (i > maxReach) {
+                return false;
+            }
+
+            maxReach = Math.max(maxReach, i + arr[i]);
         }
-        n = n- i; 
-        rows++;
-     }
 
-     return rows;
-  }
+        return true;
+    }
 
-  public static void main(String[] args){
-    Solution s1 = new Solution();
-    System.out.println(s1.coinscheck(5));
-  }
+    public static void main(String[] args) {
+
+        Solution s = new Solution();
+
+        int[] arr = {2, 3, 1, 1, 4};
+
+        System.out.println(s.canJump(arr));
+    }
 }
