@@ -44,7 +44,7 @@ class MergeSorted {
             mergeArray[index] = arr2[i];
             index++;
         }
-        Arrays.sort(mergeArray);
+
        for(int num : mergeArray){
             System.out.print(num + " ");
         }

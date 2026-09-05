@@ -36,7 +36,7 @@ class Selection {
 
                 }
             }
-            int temp = arr[i];
+            int temp = arr[i];//4
             arr[i] = arr[min];
             arr[min] = temp;
         }
