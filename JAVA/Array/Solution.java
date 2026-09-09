@@ -28,12 +28,32 @@
 
 
 class Solution {
-
+    // public void CheckPalindrom(int n) {
+    //   for(int i = 0;i< n/2; i++){
+    //     if(n%10 == n/10){
+    //         n = n/10;
+    //     }
+    //     else{
+    //         System.out.println("Not Palindrom");
+    //     }
+    //   }
+    // }
     public static void main(String[] args) {
+      int num = -123;
+      int reverse = 0;
+       int sign = num > 0 ? 1 : -1;
+       num = Math.abs(num);
+        while (num > 0) {
+            System.out.println("from " + num);
+            int digit = num % 10; 
 
-        int a = 45;
-        int b = 50;
-       int max = Math.max(a,b);
-        System.out.println(max);
+             if (reverse > Integer.MAX_VALUE / 10 ||
+                reverse < Integer.MIN_VALUE / 10) {
+                return ;
+            }
+            reverse = reverse * 10 + digit; 
+            num = num / 10 ;
+        };
+        System.out.println(reverse = reverse * sign);
     }
 }
