@@ -28,16 +28,8 @@
 
 
 class Solution {
-    // public void CheckPalindrom(int n) {
-    //   for(int i = 0;i< n/2; i++){
-    //     if(n%10 == n/10){
-    //         n = n/10;
-    //     }
-    //     else{
-    //         System.out.println("Not Palindrom");
-    //     }
-    //   }
-    // }
+
+    int []
     public static void main(String[] args) {
       int num = -123;
       int reverse = 0;
