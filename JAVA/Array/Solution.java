@@ -28,24 +28,20 @@
 
 
 class Solution {
+    public int firstUniqChar(String s) {
 
-    int []
-    public static void main(String[] args) {
-      int num = -123;
-      int reverse = 0;
-       int sign = num > 0 ? 1 : -1;
-       num = Math.abs(num);
-        while (num > 0) {
-            System.out.println("from " + num);
-            int digit = num % 10; 
-
-             if (reverse > Integer.MAX_VALUE / 10 ||
-                reverse < Integer.MIN_VALUE / 10) {
-                return ;
+        for(int i =0; i< s.length(); i++){
+            char ch = s.charAt(i);
+    //loveleetcodtve
+            if(s.indexOf(ch) == s.lastIndexOf(ch)){
+                return i;
             }
-            reverse = reverse * 10 + digit; 
-            num = num / 10 ;
-        };
-        System.out.println(reverse = reverse * sign);
+        }
+        return -1;
+    }
+    public static void main(String[] arg){
+        String s = "loveeezxtcodtve";
+        Solution s1 = new Solution();
+        System.out.println(s1.firstUniqChar(s));
     }
 }
